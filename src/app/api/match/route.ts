@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server';
 import { prisma } from '@/lib/prisma';
 import type { MatchState, InningsState, BallIcon } from '@/types/cricket';
 
+export const dynamic = 'force-dynamic';
 // ─── buildInningsState ───────────────────────────────────────────────────────
 function buildInningsState(innings: any, players: any[], totalOvers: number): InningsState {
   const events: any[]       = innings.ballEvents   ?? [];
